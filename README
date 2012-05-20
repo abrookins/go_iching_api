@@ -1,0 +1,17 @@
+This is a JSON API wrapper around the `iching` library.
+
+It provides the following endpoints:
+
+    POST: /reading (with 'question' value provided by client)
+    GET: /reading (no question provided by client)
+    GET: /hexagrams/{hexagram number}
+    GET: /hexagrams
+
+POST a 'question' to /reading or just GET it -- you'll receive a generated
+hexagram and "NextHexagram" if the lines in the first hexagram are changing. The
+only difference is, you'll get back the question the client asked if one is
+provided.
+
+GET a single hexagram by its number (see:
+http://en.wikipedia.org/wiki/List_of_hexagrams_of_the_I_Ching) or all hexagrams
+at /hexagrams.
